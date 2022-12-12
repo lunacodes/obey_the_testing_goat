@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from lists.views import HomeView
+from lists.views import HomeView, ListView, NewListView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     # path("", views.home_page, name="home"),
     path("", HomeView.as_view(), name="home"),
+    path("lists/<new>", NewListView.as_view(), name="view_list"),
+    path("lists/<list>", ListView.as_view(), name="view_list"),
 ]
