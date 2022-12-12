@@ -1,0 +1,44 @@
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+allow_redefinition = "False"
+check_untyped_defs = "True"
+disallow_incomplete_defs = "True"
+disallow_untyped_defs = "True"
+# exclude = '[a-zA-Z_]+.migrations.|[a-zA-Z_]+.tests.|[a-zA-Z_]+.testing.'
+exclude = '^tests'
+follow_imports = "skip"
+ignore_missing_imports = "True"
+incremental = "True"
+plugins = ["mypy_django_plugin.main"]
+show_column_numbers = "True"
+show_traceback = "True"
+strict = "True"
+strict_optional = "True"
+warn_no_return = "True"
+warn_redundant_casts = "True"
+warn_unreachable = "True"
+warn_unused_configs = "True"
+warn_unused_ignores = "True"
+
+[tool.django-stubs]
+django_settings_module = "django_project.settings"
+
+[tool.flake8]
+max-line-length = 88
+min_python_version = "3.11.0" # for flake8-typing-imports
+extend-ignore = ['E203', 'E501']
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "django_project.settings"
+filterwarnings = "ignore::django.utils.deprecation.RemovedInDjango50Warning"
+# addopts = """
+#     --cov=.
+#     --cov-report term-missing:skip-covered
+#     --cov-fail-under 100
+#     """
+#
+[tool.coverage.run]
+# source = ["resume"]
+omit = ["_archive/*"]
