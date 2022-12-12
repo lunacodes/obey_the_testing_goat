@@ -4,6 +4,7 @@ staticfiles/
 venv/
 __pycache__
 _archive/
+book-example/
 
 .coverage
 .env
@@ -16,4 +17,4 @@ _archive/
 *.pyo
 *.sh
 *.sqlite3
-TODO.md
+notes.md

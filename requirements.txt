@@ -6,6 +6,8 @@
 #
 asgiref==3.5.2
     # via django
+astroid==2.12.13
+    # via pylint
 asttokens==2.2.1
     # via stack-data
 async-generator==1.10
@@ -44,6 +46,7 @@ colorama==0.4.6
     #   click
     #   djlint
     #   ipython
+    #   pylint
     #   pytest
     #   tqdm
 coverage[toml]==6.5.0
@@ -52,6 +55,8 @@ cssbeautifier==1.14.7
     # via djlint
 decorator==5.1.1
     # via ipython
+dill==0.3.6
+    # via pylint
 distlib==0.3.6
     # via virtualenv
 django==4.1.4
@@ -77,7 +82,35 @@ executing==1.2.0
     # via stack-data
 filelock==3.8.2
     # via virtualenv
-flake8==6.0.0
+flake8==5.0.4
+    # via
+    #   -r requirements.in
+    #   flake8-comprehensions
+    #   flake8-django
+    #   flake8-docstrings
+    #   flake8-print
+    #   flake8-pyproject
+    #   flake8-tidy-imports
+    #   flake8-typing-imports
+flake8-breakpoint==1.1.0
+    # via -r requirements.in
+flake8-comprehensions==3.10.1
+    # via -r requirements.in
+flake8-django==1.1.5
+    # via -r requirements.in
+flake8-docstrings==1.6.0
+    # via -r requirements.in
+flake8-plugin-utils==1.3.2
+    # via
+    #   -r requirements.in
+    #   flake8-breakpoint
+flake8-print==5.0.0
+    # via -r requirements.in
+flake8-pyproject==1.2.2
+    # via -r requirements.in
+flake8-tidy-imports==4.8.0
+    # via -r requirements.in
+flake8-typing-imports==1.14.0
     # via -r requirements.in
 h11==0.14.0
     # via wsproto
@@ -98,17 +131,23 @@ iniconfig==1.1.1
 ipython==8.7.0
     # via -r requirements.in
 isort==5.10.1
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   pylint
 jedi==0.18.2
     # via ipython
 jsbeautifier==1.14.7
     # via
     #   cssbeautifier
     #   djlint
+lazy-object-proxy==1.8.0
+    # via astroid
 matplotlib-inline==0.1.6
     # via ipython
 mccabe==0.7.0
-    # via flake8
+    # via
+    #   flake8
+    #   pylint
 mypy==0.991
     # via
     #   -r requirements.in
@@ -144,6 +183,7 @@ pip-tools==6.11.0
 platformdirs==2.6.0
     # via
     #   black
+    #   pylint
     #   virtualenv
 pluggy==1.0.0
     # via pytest
@@ -153,14 +193,22 @@ prompt-toolkit==3.0.36
     # via ipython
 pure-eval==0.2.2
     # via stack-data
-pycodestyle==2.10.0
-    # via flake8
+pycodestyle==2.9.1
+    # via
+    #   flake8
+    #   flake8-print
 pycparser==2.21
     # via cffi
-pyflakes==3.0.1
+pydocstyle==6.1.1
+    # via flake8-docstrings
+pyflakes==2.5.0
     # via flake8
 pygments==2.13.0
     # via ipython
+pylint==2.15.8
+    # via pylint-plugin-utils
+pylint-plugin-utils==0.7
+    # via -r requirements.in
 pysocks==1.7.1
     # via urllib3
 pytest==7.2.0
@@ -193,6 +241,8 @@ six==1.16.0
     #   jsbeautifier
 sniffio==1.3.0
     # via trio
+snowballstemmer==2.2.0
+    # via pydocstyle
 sortedcontainers==2.4.0
     # via trio
 sqlparse==0.4.3
@@ -203,6 +253,8 @@ toml==0.10.2
     # via pre-commit
 tomli==2.0.1
     # via django-stubs
+tomlkit==0.11.6
+    # via pylint
 tqdm==4.64.1
     # via
     #   djlint
@@ -240,6 +292,8 @@ webdriver-manager==3.8.5
     # via -r requirements.in
 wheel==0.38.4
     # via pip-tools
+wrapt==1.14.1
+    # via astroid
 wsproto==1.2.0
     # via trio-websocket
 zipp==3.11.0

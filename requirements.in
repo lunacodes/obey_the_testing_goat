@@ -5,6 +5,15 @@ django-stubs
 django-stubs-ext
 djlint
 flake8
+flake8-breakpoint
+flake8-comprehensions
+flake8-django
+flake8-docstrings
+flake8-plugin-utils
+flake8-print
+flake8-pyproject
+flake8-tidy-imports
+flake8-typing-imports
 ipython
 isort
 mypy
@@ -12,6 +21,7 @@ mypy-extensions
 pip-lock
 pip-tools
 pre-commit
+pylint-plugin-utils
 pytest
 pytest-cov
 pytest-django

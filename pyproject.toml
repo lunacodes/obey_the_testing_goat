@@ -23,7 +23,7 @@ warn_unused_configs = "True"
 warn_unused_ignores = "True"
 
 [tool.django-stubs]
-django_settings_module = "django_project.settings"
+django_settings_module = "superlists.settings"
 
 [tool.flake8]
 max-line-length = 88
@@ -31,8 +31,9 @@ min_python_version = "3.11.0" # for flake8-typing-imports
 extend-ignore = ['E203', 'E501']
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "django_project.settings"
+DJANGO_SETTINGS_MODULE = "superlists.settings"
 filterwarnings = "ignore::django.utils.deprecation.RemovedInDjango50Warning"
+norecursedirs = ["book-example"]
 # addopts = """
 #     --cov=.
 #     --cov-report term-missing:skip-covered
@@ -41,4 +42,4 @@ filterwarnings = "ignore::django.utils.deprecation.RemovedInDjango50Warning"
 #
 [tool.coverage.run]
 # source = ["resume"]
-omit = ["_archive/*"]
+omit = ["_archive/*", "book-example/*"]
